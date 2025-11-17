@@ -1,0 +1,105 @@
+body.login-body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #f9d976, #f39f86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-container {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 30px;
+  text-align: center;
+}
+
+.switch-tab {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+  background: #e0e0e0;
+  color: #333;
+  font-weight: 600;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#guru:checked ~ .switch-tab label[for="guru"],
+#mpk:checked ~ .switch-tab label[for="mpk"],
+#ortu:checked ~ .switch-tab label[for="ortu"] {
+  background: #1976d2;
+  color: white;
+}
+
+.form-box {
+  display: none;
+}
+
+#guru:checked ~ .form-container .guru-box,
+#mpk:checked ~ .form-container .mpk-box,
+#ortu:checked ~ .form-container .ortu-box {
+  display: block;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.btn {
+  background: #1976d2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1565c0;
+}
+
+.exit-btn {
+  margin-top: 20px;
+}
+
+.btn-secondary {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+

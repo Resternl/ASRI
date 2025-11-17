@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.exit-btn {
+  text-align: left;
+  padding: 10px 15px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #f9d976, #f39f86);
+}
+
+.logo{
+    text-align: left;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.hero p {
+  margin: 10px 0;
+}
+
+.fitur {
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.fitur h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fitur p{
+    text-align: center;
+}
+
+.fitur-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ff6b27;
+  color: rgb(223, 223, 223);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.tujuan {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fafafa;
+}
+
+.credit {
+  background: darkslategray;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: block;      
+  width: 100%;        
+  text-align: center;  
+}
+
+
+.login-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f9d976, #f39f86);
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: #fff;
+  overflow: hidden;
+}
+
+.switch-tab {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+.switch-tab .tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
+  background: #f9f9f9;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#signin:checked ~ .switch-tab label[for="signin"],  
+#signup:checked ~ .switch-tab label[for="signup"]{
+  border-bottom: 3px solid #007bff;
+  color: #007bff;
+  background: #fff;
+}
+
+.form-container {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden; 
+}
+
+.form-box {
+  width: 50%;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.form-box h2 {
+  margin-bottom: 15px;
+}
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+
+#signin:checked ~ .form-container {
+  transform: translateX(0);
+}
+
+#signup:checked ~ .form-container {
+  transform: translateX(-50%);
+}
+
+.form-container { 
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+} 
+
+.form-box { 
+  width: 50%; 
+  padding: 25px; 
+  box-sizing: border-box; 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.error-message {
+  background: #ffdddd;
+  color: #d8000c;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d8000c;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 18px;
+  }
+
+  .hero p{
+    font-size: 10px;
+  }
+
+  .logo p{
+    font-size: 14px;
+  }
+
+  .fitur-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-container {
+    max-width: 95%;
+  }
+  .form-box {
+    padding: 15px;
+  }
+}
